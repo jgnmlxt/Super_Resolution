@@ -1,0 +1,12 @@
+function slider=generate_slider(larger_pixel,compressing_factor,shifting_direction)
+    slider=zeros(larger_pixel*compressing_factor,larger_pixel*compressing_factor+compressing_factor-1);
+
+    if shifting_direction=="r"
+    elseif shifting_direction=="l"
+    end
+    
+    for i=1:larger_pixel*compressing_factor
+        slider(i,i:i+compressing_factor-1)=1;
+    end
+
+end
