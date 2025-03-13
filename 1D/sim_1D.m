@@ -1,4 +1,4 @@
-function [GT,vu,vu_pos]=sim_1D(compressing_factor,larger_pixel,shifting_direction,range_start,range_end)
+function [GT,vu,vu_pos,image_series]=sim_1D(compressing_factor,larger_pixel,shifting_direction,range_start,range_end)
 
     whole_spectrum=create_image(larger_pixel,compressing_factor,range_start,range_end);
     %whole_spectrum(end-compressing_factor+1:end)=0;
