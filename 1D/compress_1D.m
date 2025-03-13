@@ -28,7 +28,7 @@ function [image_series,GT_]=compress_1D(GT,compressing_factor,l_pixel,shifting_d
     end
 
     for i=1:compressing_factor
-        shifted_image_series{i}=GT(start_point-d_shift*(i-1):end_point-d_shift*(i-1));
+        shifted_image_series{i}=GT(start_point+d_shift*(i-1):end_point+d_shift*(i-1));
     end
 
     GT_=shifted_image_series{1};
@@ -42,6 +42,5 @@ function [image_series,GT_]=compress_1D(GT,compressing_factor,l_pixel,shifting_d
         end
         image_series{i}=temp;
     end
-
 
 end
