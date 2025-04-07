@@ -1,0 +1,4 @@
+GT=phantom3d(48);
+%% 
+
+[xy_z,yz_x,xz_y,two_xy]=get_inputs(GT)
