@@ -1,9 +1,9 @@
-GT=phantom3d(48);
+GT=phantom3d(24);
+temp=rand(4,4,4);
 %% 
-a=[1 2 3;4 5 6;7 8 9];
-b=zeros(3,3,3);
-b(:,:,1)=a;
-b(:,:,2)=a;
-b(:,:,3)=a;
+[xy_z,yz_x,xz_y,two_xy]=get_inputs(temp);
+A=get_A(zeros(4,4,4));
+y=get_y(xy_z,yz_x,xz_y,two_xy);
+x=A\y;
 
-output=compress(b);
+image=convert_x(x);
