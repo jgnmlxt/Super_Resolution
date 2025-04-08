@@ -1,6 +1,6 @@
 function [xy_z,yz_x,xz_y,two_xy]=get_inputs(GT)
     [x,y,z]=size(GT);
-    if (~x==y)&&(~y==z)
+    if (~x==y)||(~y==z)
         error("Dimension of GT is wrong; it should have same number of pixels in all dimension.");
     end
 
